@@ -1,0 +1,13 @@
+Deployment Architecture
+
+Create a web3 instance using the Web3 constructor. 
+Give a provider to it, to tell the instance what network it is supposed to be communicating with.
+Make sure that we are using an account that has some ether in it on the Rinkeby Network/Test Network.
+(Earlier for testing, used Ganache which pregenerated a set of accounts with ether, also no worry of private/public keys)
+So here take the account mnemonic, and pass it to the provider.
+Also when we deploy to the Rinkeby Network, we have to ensure that there is some node that we can connect to in the network.
+One common solution is to run a local node on your machine. However time-consuming and tedious process.
+Alternate solution - use a service Infura. It is a public API that can guve access to a node that is hosted on the Rinkeby Network by Infura.
+(Infura also has nodes on other networks in Ethereum) 
+
+truffle-hdwallet-provider is a special provider that can connect to an outside node in a network, and also simultaneously unlock the account.
